@@ -50,8 +50,6 @@ testing() {
 			msg "pass" "${file_basename}(${test_case})" "$out" "$answer"
 		else
 			msg "err" "${file_basename}(${test_case})" "$out" "$answer"
-			echo $out
-			echo $answer
 			exit 1
 		fi
 		((count++))
