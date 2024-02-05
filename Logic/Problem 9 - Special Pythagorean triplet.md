@@ -1,5 +1,5 @@
 ___
-![[Problem 9 - Speacial Pythagorean triplet]]
+![[Problem 9]]
 ___
 
 ## Retos
