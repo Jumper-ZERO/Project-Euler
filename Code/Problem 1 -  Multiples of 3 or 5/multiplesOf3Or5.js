@@ -16,10 +16,15 @@ rl.on('close', () => {
 });
 
 function multiplesOf3Or5(number) {
-    let mulMax = (mul, max=number) => Math.floor((max-1)/mul);
-    let mulSum = (num, mul) => num * (num+1) / 2 * mul;
-    let mulTotal = (n) => mulSum(mulMax(n), n);
-    return mulTotal(3) + mulTotal(5) - mulTotal(15);
+    number = BigInt(number);
+    
+    const mulSum = (mul) => {
+        let max = (number - 1n) / BigInt(mul); // Triangular number begin the multiple
+        let sum = max * (max + 1n) / 2n;
+        return BigInt(mul) * sum;
+    }
+
+    return BigInt(mulSum(3) + mulSum(5) - mulSum(15)).toString();
 }
 
 function main(input) {
