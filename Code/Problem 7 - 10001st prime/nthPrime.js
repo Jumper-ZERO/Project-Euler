@@ -25,7 +25,7 @@ function main(input) {
 
 //--------------------Code--------------------
 
-function sieveOfTheotostenes(num) {
+function sieveOfEratosthenes(num) {
   let sieve = Array(num+1).fill(true);
   let primes = [];
 
@@ -44,7 +44,7 @@ function sieveOfTheotostenes(num) {
   return primes;
 }
 
-const primes = sieveOfTheotostenes(104743);
+const primes = sieveOfEratosthenes(104743);
 
 function nthPrime(n) {
   return primes[n-1];
